@@ -1,0 +1,11 @@
+<div class="top-airing-container">
+    <div class="container-top">
+        <h2 class="top-airing-title title">
+            top 10 airing
+        </h2>
+        <fa-icon class="caret-icon" [icon]="showList ? up : down" (click)="toggleList()"></fa-icon>
+    </div>
+    <div class="top-airing-list" *ngIf="showList">
+        <anime-item *ngFor="let anime of topAiring?.data" [anime]="anime"></anime-item>
+    </div>
+</div>

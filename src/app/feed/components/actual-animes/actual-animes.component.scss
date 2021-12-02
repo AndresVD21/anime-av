@@ -1,0 +1,67 @@
+@import "../../../../assets/scss/variables";
+
+.actual-animes-container {
+    padding: 1em;
+
+    .container-header {
+        display: grid;
+        margin-bottom: 1.5em;
+        .title {
+            text-transform: uppercase;
+            // margin-bottom: 0.5em;
+    
+            justify-self: center;
+    
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                background-color: $alice-blue;
+                height: 15px;
+                margin-top: -15px;
+                margin-left: 15px;
+            }
+        }
+    }
+
+    .season-filters {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+
+        .filter {
+            // justify-self: center;
+            // border-radius: 50px;
+            padding: 1em 1.5em;
+            text-align: center;
+            font-weight: 400;
+            text-transform: capitalize;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            cursor: pointer;
+            caret-color: transparent;
+
+            &+.filter {
+                margin-left: .5em;
+            }
+
+            &:active,
+            &:focus {
+                box-shadow: none;
+            }
+
+            &.active {
+                background-color: $maximum-green;
+                color: white;
+                // border: 5px solid $maximum-green;
+            }
+
+
+        }
+    }
+
+    .anime-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 1em;
+        padding: 1em 0;
+    }
+}

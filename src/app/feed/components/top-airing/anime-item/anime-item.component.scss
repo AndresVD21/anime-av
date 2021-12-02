@@ -1,0 +1,30 @@
+@import "../../../../../assets/scss/variables";
+
+.anime-item {
+    padding: 0.5em 0.3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+
+    &:hover {
+        background-color: lightgrey;
+    }
+
+    .title {
+        
+    }
+
+    .sub-title {
+        font-size: 0.8rem;
+        color: darkgrey;
+    }
+
+    .badge {
+        border-radius: 20%;
+        background-color: $maximum-green;
+        padding: 0.2em 0.5em;
+        color: lightgrey;
+        font-weight: 600;
+    }
+}

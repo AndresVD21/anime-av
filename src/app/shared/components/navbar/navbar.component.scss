@@ -1,0 +1,15 @@
+@import "../../../../assets/scss/variables";
+
+.navbar {
+    width: 100%;
+    background-color: $blue-sapphire;
+    padding: 1em;
+    color: $alice-blue;
+    display: flex;
+    align-items: center;
+
+    .title {
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,22 @@
+<div class="actual-animes-container">
+    <header class="container-header">
+        <h2 class="title">
+            {{isFilterAll() ? 'animes '+currentYear : seasonTitle(actualSeasonFilter)}}
+            <!-- anime by season {{currentYear}} -->
+        </h2>
+    </header>
+    <div class="season-filters">
+        <span [ngClass]="{active: actualSeasonFilter === 'all'}" class="filter" (click)="getAllAnimes()">all</span>
+        <span [ngClass]="{active: actualSeasonFilter === 'winter'}" class="filter"
+            (click)="getAnimeBySeason('winter')">winter</span>
+        <span [ngClass]="{active: actualSeasonFilter === 'spring'}" class="filter"
+            (click)="getAnimeBySeason('spring')">spring</span>
+        <span [ngClass]="{active: actualSeasonFilter === 'summer'}" class="filter"
+            (click)="getAnimeBySeason('summer')">summer</span>
+        <span [ngClass]="{active: actualSeasonFilter === 'fall'}" class="filter"
+            (click)="getAnimeBySeason('fall')">fall</span>
+    </div>
+    <section class="anime-list">
+        <anime-card *ngFor="let anime of getAnimeListData()" [anime]="anime"></anime-card>
+    </section>
+</div>
