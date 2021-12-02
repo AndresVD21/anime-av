@@ -8,5 +8,5 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - run: npm install @angular/cli
-      - run: ng v
+      - run: npm install -g @angular/cli
+      - run: ng version
