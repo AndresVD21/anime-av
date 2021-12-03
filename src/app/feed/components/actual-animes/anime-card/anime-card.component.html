@@ -1,20 +1,7 @@
 <div class="anime-card">
-    <div class="average-rating" *ngIf="getIntegerRating() > 0">{{getIntegerRating()}}</div>
-    <div class="front">
-        <img class="anime-poster" [src]="getAnimeAttributes().posterImage.original"
-            alt="{{getAnimeAttributes().canonicalTitle}}">
+    <img class="anime-poster" [src]="getAnimeAttributes().posterImage.original"
+        alt="{{getAnimeAttributes().canonicalTitle}}">
+    <div class="anime-info">
         <h3 class="name">{{getCanonicalTitle()}}</h3>
-        <!-- <div class="details">
-            <p class="age-rating">{{getAnimeAttributes().ageRating}}</p>
-        </div> -->
     </div>
-    <div class="back">
-        <!-- <p class="jp-title">{{getTitles().ja_jp}}</p> -->
-        <div class="anime-info">
-            <p class="info">{{getAnimeAttributes().popularityRank}}<span>rank</span></p>
-            <p class="info">{{getAnimeAttributes().status}}<span>status</span></p>
-        </div>
-        <button class="btn">See more</button>
-    </div>
-    <div class="backgroundWrapper"></div>
 </div>
