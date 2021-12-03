@@ -2,14 +2,15 @@
 
 .navbar {
     width: 100%;
-    background-color: $blue-sapphire;
+    background-color: $smoky-black;
     padding: 1em;
-    color: $alice-blue;
+    color: $white;
     display: flex;
     align-items: center;
 
     .title {
         font-size: 2rem;
         text-transform: uppercase;
+        font-weight: 900;
     }
 }

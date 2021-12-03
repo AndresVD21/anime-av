@@ -3,9 +3,10 @@
 .top-airing-container {
     padding: 1.5em;
     border-radius: 10px;
-    box-shadow: rgba($steel-blue, 0.3) 0px 0px 8px;
+    box-shadow: rgba($rich-black, 0.3) 0px 0px 8px;
     display: grid;
     margin: 1em;
+    color: $smoky-black;
 
     .container-top {
         display: flex;
@@ -13,24 +14,13 @@
         justify-content: space-between;
 
         .title {
-            text-transform: uppercase;
-            // margin-bottom: 0.5em;
-    
+            text-transform: uppercase;    
             justify-self: center;
-    
-            &::after {
-                content: '';
-                display: block;
-                width: 100%;
-                background-color: $alice-blue;
-                height: 15px;
-                margin-top: -15px;
-                margin-left: 15px;
-            }
         }
 
         .caret-icon {
             cursor: pointer;
+            color: $smoky-black;
         }
     }
 

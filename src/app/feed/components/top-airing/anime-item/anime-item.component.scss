@@ -11,20 +11,18 @@
         background-color: lightgrey;
     }
 
-    .title {
-        
-    }
-
     .sub-title {
         font-size: 0.8rem;
-        color: darkgrey;
+        color: rgba($smoky-black, 0.5);
     }
 
     .badge {
         border-radius: 20%;
-        background-color: $maximum-green;
+        background-color: $spanish-green;
         padding: 0.2em 0.5em;
-        color: lightgrey;
-        font-weight: 600;
+        color: $white;
+        font-weight: 400;
+        font-size: 1.2rem;
+        margin-left: .5em;
     }
 }
