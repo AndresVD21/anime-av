@@ -3,9 +3,14 @@
         <h2 class="top-airing-title title">
             top 10 airing
         </h2>
-        <fa-icon class="caret-icon" [icon]="showList ? up : down" (click)="toggleList()"></fa-icon>
+        <fa-icon *ngIf="!isDesktop" class="caret-icon" [icon]="showList ? up : down" (click)="toggleList()"></fa-icon>
     </div>
-    <div class="top-airing-list" *ngIf="showList">
+    <div class="top-airing-list" *ngIf="!isLoading && showList">
         <anime-item *ngFor="let anime of topAiring?.data" [anime]="anime"></anime-item>
     </div>
+    <ng-container *ngIf="isLoading">
+        <div class="top-airing-ghost"></div>
+        <div class="top-airing-ghost"></div>
+        <div class="top-airing-ghost"></div>
+    </ng-container>
 </div>
