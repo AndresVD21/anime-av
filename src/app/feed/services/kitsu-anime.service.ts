@@ -34,7 +34,7 @@ export class KitsuAnimeService {
           'filter[season]': `${season}`, 
           'filter[seasonYear]': `${currentYear}`, 
           'filter[subtype]': 'TV',
-          'sort': 'startDate',
+          'sort': '-startDate',
           'page[offset]': '0',
           'page[limit]': '20'
         }
@@ -48,7 +48,7 @@ export class KitsuAnimeService {
         params: {
           'filter[seasonYear]': `${currentYear}`, 
           'filter[subtype]': 'TV',
-          'sort': 'startDate',
+          'sort': '-startDate',
           'page[offset]': '0',
           'page[limit]': '20'
         }
