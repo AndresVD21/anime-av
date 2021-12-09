@@ -23,6 +23,16 @@
         color: $white;
         font-weight: 400;
         font-size: 1.2rem;
-        margin-left: .5em;
+        margin-left: 0.5em;
+    }
+}
+
+@media (min-width: 800px) {
+    .anime-item {
+        .anime-text {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     }
 }

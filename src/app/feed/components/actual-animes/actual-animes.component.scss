@@ -52,7 +52,15 @@
     .anime-list {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        row-gap: 1em;
+        gap: 1em;
         padding: 1em 0;
+    }
+}
+
+@media (min-width: 800px) {
+    .actual-animes-container {
+        .anime-list {
+            grid-template-columns: repeat(4, 1fr);
+        }
     }
 }

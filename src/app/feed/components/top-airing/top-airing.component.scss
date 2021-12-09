@@ -1,10 +1,22 @@
 @import "../../../../assets/scss/variables";
 
+$title-height: 20px;
+$title-width: 50%;
+$title-position: 0.3em 0.5em;
+$title-skeleton: linear-gradient(rgba($spanish-green, 0.4) $title-height, transparent 0);
+
+$subtitle-height: 20px;
+$subtitle-width: 40%;
+$subtitle-position: 0.3em calc(21px + 0.5em);
+$subtitle-skeleton: linear-gradient(rgba($spanish-green, 0.4) $subtitle-height, transparent 0);
+
+$blur-width: 20px;
+
 .top-airing-container {
     padding: 1.5em;
     border-radius: 10px;
     box-shadow: rgba($rich-black, 0.3) 0px 0px 8px;
-    display: grid;
+    // display: grid;
     margin: 1em;
     color: $smoky-black;
 
@@ -14,7 +26,7 @@
         justify-content: space-between;
 
         .title {
-            text-transform: uppercase;    
+            text-transform: uppercase;
             justify-self: center;
         }
 
@@ -24,6 +36,37 @@
         }
     }
 
-    
+    .top-airing-ghost {
+        width: 100%;
+        height: calc(40px + 0.5em);
+        background-image: linear-gradient(
+                90deg,
+                rgba($white, 0) 0,
+                rgba($white, 0.8) 50%,
+                rgba($white, 0) 100%
+            ),
+            $title-skeleton, $subtitle-skeleton;
 
+        background-size:
+            300px,
+            $title-width $title-height,
+            $subtitle-width $subtitle-height;
+
+        background-position: 
+            -150% 0,
+            $title-position,
+            $subtitle-position;
+
+        background-repeat: no-repeat;
+        animation: loading 1.5s infinite;
+    }
+}
+
+@keyframes loading {
+    to {
+        background-position: 
+            350% 0,
+            $title-position,
+            $subtitle-position;
+    }
 }

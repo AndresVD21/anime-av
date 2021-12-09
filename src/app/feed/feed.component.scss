@@ -1,3 +1,21 @@
 .feed-container {
     height: 100%;
 }
+
+@media (min-width: 800px) {
+    .feed-container {
+        display: grid;
+        grid-template-columns: 30% 1fr;
+        grid-template-areas: 
+            "aside main";
+
+        .left-panel {
+            grid-area: aside;
+        }
+
+        .last-episodes {
+            grid-area: main;
+        }
+    }
+
+}
